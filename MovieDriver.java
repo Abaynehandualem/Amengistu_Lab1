@@ -20,6 +20,10 @@
 		public static void main(String[] args)
 		
 		{
+
+			String input = null;
+			do
+			{
 		
 			Scanner keyboard = new Scanner(System.in);
 			Movie movie = new Movie();
@@ -36,9 +40,17 @@
 			movie.setSoldTickets(dSoldTickets);
 			
 			System.out.println( movie.toString());
+			System.out.println("Do you want to enter another? ( y or n)");
+			Scanner scan = new Scanner(System.in);
+			input = scan.nextLine();
+			}
+			while (input.equalsIgnoreCase("y"));
+			{
+
 			System.out.println("Goodbye");
 			}
 		}
+	}
 
 	
 
